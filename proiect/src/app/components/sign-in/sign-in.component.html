@@ -1,0 +1,51 @@
+<div class="container container-centre" style="margin-top: 60px">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-xl-5 col-md-8">
+      <h2 class="text-center">Sign in</h2>
+      
+      <form class="bg-white rounded shadow-5-strong p-5">
+        <!-- Email input -->
+        <div class="form-outline">
+          <input type="email" id="form1Example1" class="form-control"laceholder="Username"
+          #userName/>
+          <label class="form-label" for="form1Example1">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline">
+          <input type="password"
+          id="form1Example2"
+          class="form-control"
+          #userPassword
+          required/>
+          <label class="form-label" for="form1Example2">Password</label>
+        </div>
+
+      
+        <div class="row">
+          <div class="col text-center">
+            <!-- Simple link -->
+            <a routerLink="/forgot-password">Forgot password?</a>
+          </div>
+        </div>
+
+        
+        <input
+        type="button"
+        class="btn btn-primary btn-block"
+        value="Sign in"
+        (click)="authService.SignIn(userName.value, userPassword.value)"
+      />
+        <p class="text-center">Or</p>
+        
+      
+        <div class="col text-center" style="padding: 10px">
+          <p>Don&rsquo;t have an account? <a   
+            class="redirect"
+            routerLink="/register-user">Sign up </a> </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
